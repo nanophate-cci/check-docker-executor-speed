@@ -1,0 +1,9 @@
+version: 2.1
+
+jobs:
+  build: # name of your job
+    docker: # executor type
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 - 
